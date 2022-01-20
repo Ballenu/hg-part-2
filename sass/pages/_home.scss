@@ -1,0 +1,12 @@
+.events {
+    max-width: 120rem;
+
+    &__prepage {
+        width: auto;
+        height: 50rem;
+        background-image: url("/img/play.jpg");
+        background-position: 100%;
+        background-size: 100%;
+        //clip-path: polygon(0% 94%, 100% 94%, 100% 10%, 0% 10%);
+    }
+}

@@ -1,0 +1,30 @@
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: Century Gothic, sans-serif; }
+
+::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: Century Gothic, sans-serif; }
+
+.events {
+  max-width: 120rem; }
+  .events__prepage {
+    width: auto;
+    height: 50rem;
+    background-image: url("/img/play.jpg");
+    background-position: 100%;
+    background-size: 100%; }
