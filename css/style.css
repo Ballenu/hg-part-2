@@ -1,8 +1,3 @@
-body {
-  font-weight: 400;
-  line-height: 1.7;
-  font-family: Century Gothic, sans-serif; }
-
 ::after,
 *::before {
   margin: 0;
@@ -20,11 +15,158 @@ body {
   line-height: 1.7;
   font-family: Century Gothic, sans-serif; }
 
-.events {
-  max-width: 120rem; }
-  .events__prepage {
-    width: auto;
-    height: 50rem;
-    background-image: url("/img/play.jpg");
-    background-position: 100%;
-    background-size: 100%; }
+.popup__events--headings {
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), #00b4c9);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  transform: translateX(1rem);
+  font-size: 1.4rem;
+  letter-spacing: 1.2rem; }
+
+.popup__events--text {
+  color: #000;
+  font-family: "Bellerose";
+  font-size: 1.3rem;
+  text-align: left;
+  margin-left: 1.5rem;
+  text-shadow: 1rem 0rem 1rem #f6fa00; }
+
+@font-face {
+  .popup__events--text {
+    font-family: "Bellerose";
+    src: "fonts/Bellerose.ttf"; } }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close {
+    z-index: 1; }
+    .popup__close:link, .popup__close:visited {
+      color: #777;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all0 0.2s;
+      line-height: 1; }
+    .popup__close:hover {
+      color: #eee; }
+  .popup__events {
+    transition: all 1s;
+    position: relative;
+    margin: 0 auto; }
+    .popup__events--gaming {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/gaming.jpg"); }
+    .popup__events--celebrations {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/celebrations.jpg"); }
+    .popup__events--wedding {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/wedding.jpg"); }
+    .popup__events--meetings {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/meetings.jpg"); }
+    .popup__events--headings-bg {
+      width: inherit;
+      height: 3vh;
+      background-color: rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 75em) {
+        .popup__events--headings-bg {
+          width: 35%; } }
+      @media only screen and (max-width: 56.25em) {
+        .popup__events--headings-bg {
+          width: 58%; } }
+      @media only screen and (max-width: 37.5em) {
+        .popup__events--headings-bg {
+          width: 72%; } }
+
+.btn__events {
+  position: absolute;
+  margin: 0 auto;
+  width: 10rem;
+  height: 10rem;
+  top: 50%;
+  left: 47%;
+  z-index: 1; }
+  .btn__events--link, .btn__events--link:link, .btn__events--link:visited {
+    background-color: #C50000;
+    clip-path: circle(50%);
+    border-radius: 5rem;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+  .btn__events--link:hover, .btn__events--link:active, .btn__events--link:focus {
+    background-color: #26B200; }
+
+.events__frontpage {
+  width: 100%;
+  height: 50rem;
+  background-image: url("/img/playrec.png");
+  background-position: bottom;
+  background-size: 100%; }
+  @media only screen and (min-width: 112.5em) {
+    .events__frontpage {
+      height: 85rem; } }
+  @media only screen and (max-width: 75em) {
+    .events__frontpage {
+      height: 45rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .events__frontpage {
+      height: 30rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .events__frontpage {
+      height: 25rem; } }
+  @media only screen and (max-width: 30rem) {
+    .events__frontpage {
+      height: 15rem; } }
+  .events__frontpage:hover {
+    -webkit-filter: grayscale(100%);
+    transform: translate(-0.3rem, 1rem); }
+    .events__frontpage:hover .btn__events {
+      transform: translate(-1rem, 10rem); }

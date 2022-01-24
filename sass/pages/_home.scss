@@ -1,12 +1,35 @@
 .events {
-    max-width: 120rem;
-
-    &__prepage {
-        width: auto;
+    &__frontpage {
+        width: 100%;
         height: 50rem;
-        background-image: url("/img/play.jpg");
-        background-position: 100%;
+        background-image: url("/img/playrec.png");
+        background-position: bottom;
         background-size: 100%;
-        //clip-path: polygon(0% 94%, 100% 94%, 100% 10%, 0% 10%);
+
+        @include respond(big-desktop) {
+            height: 85rem;
+        }
+        @include respond(tab-land) {
+            height: 45rem;
+        }
+        @include respond(tab-port) {
+            height: 30rem;
+        }
+        @include respond(phone) {
+            height: 25rem;
+        }
+        @media only screen and (max-width: 30rem) { 
+            height: 15rem;
+        };
+
+        &:hover {
+            -webkit-filter: grayscale(100%);
+            transform: translate(-0.3rem, 1rem);
+            
+            .btn__events {
+                transform: translate(-1rem, 10rem);
+            }
+        }
+
     }
 }
