@@ -125,15 +125,13 @@ body {
 .btn__events {
   position: absolute;
   margin: 0 auto;
-  width: 10rem;
-  height: 10rem;
+  width: fit-content;
+  height: fit-content;
   top: 50%;
-  left: 47%;
+  left: 50%;
+  transform: translate(-2.5rem, 5.5rem);
   z-index: 1; }
   .btn__events--link, .btn__events--link:link, .btn__events--link:visited {
-    background-color: #C50000;
-    clip-path: circle(50%);
-    border-radius: 5rem;
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -141,15 +139,14 @@ body {
     border: none;
     cursor: pointer;
     outline: none; }
-  .btn__events--link:hover, .btn__events--link:active, .btn__events--link:focus {
-    background-color: #26B200; }
 
 .events__frontpage {
   width: 100%;
   height: 50rem;
   background-image: url("/img/playrec.png");
   background-position: bottom;
-  background-size: 100%; }
+  background-size: 100%;
+  transition: all 0.2s; }
   @media only screen and (min-width: 112.5em) {
     .events__frontpage {
       height: 85rem; } }

@@ -5,6 +5,7 @@
         background-image: url("/img/playrec.png");
         background-position: bottom;
         background-size: 100%;
+        transition: all 0.2s;
 
         @include respond(big-desktop) {
             height: 85rem;
